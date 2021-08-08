@@ -9,3 +9,8 @@ Permissions it requires:
 View Messages, Ping @everyone here and all roles.
 It also requires a security ping so it can alert people. Edit it in the area message.channel.send('<@&873632222907859004>')}; and change the id to the roles
 It mentions delete message but if it does delete a message it will error, so do not let it delete messages.
+
+
+Requires: npm install discord.js
+
+
