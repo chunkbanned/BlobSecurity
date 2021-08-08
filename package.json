@@ -1,0 +1,16 @@
+{
+  "name": "blob-security",
+  "version": "1.0.0",
+  "description": "BlobSecurity protects against blacklisted words (admin abuse etc) and will warn the user.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chunkbanned",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.0.1",
+    "dotenv": "^10.0.0",
+    "mongoose": "^5.13.5"
+  }
+}
