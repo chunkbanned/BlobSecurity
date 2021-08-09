@@ -1,5 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const { Client, Intents } = require('discord.js');
+const spam = require('spamnya')
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const BannedWords = [""] // put banned words here like this [word 1], [word 2], [word 3] you dont need a comma at the last one
 const warn = new MessageEmbed()
@@ -37,6 +38,15 @@ client.on('message', msg => {
 	}
   
   });
+
+ client.on('message', (message) => {
+    //initiate the detector and log the chats with max 50 logged chats
+    spam.log(message, 50)
+
+    if(spam.tooQuick(5, 5000)){
+	     client.users.cache.get('').send('SPAM ALERT: LOCKDOWN CHAT') //put id within '' in this area: client.users.cache.get('') , you can change to do whatever you want.
+    }
+  })
 
 client.on("message", message => {
     if (BannedWords.some(word => message.toString().toLowerCase().includes(word))) {message.delete().catch(e => console.error("e")); message.reply({ embeds: [warn] }); message.channel.send('<@&873632222907859004>')};
