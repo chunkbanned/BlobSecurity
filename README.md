@@ -11,6 +11,6 @@ It also requires a security ping so it can alert people. Edit it in the area mes
 It mentions delete message but if it does delete a message it will error, so do not let it delete messages.
 
 
-Requires: npm install discord.js
+Requires: npm install discord.js npm install spamnya
 
 
